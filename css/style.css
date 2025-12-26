@@ -1577,6 +1577,42 @@ footer {
         /* Hide desktop nav */
     }
 
+    /* Adjust Logo Size */
+    .logo-img {
+        height: 32px;
+        /* Smaller than desktop */
+    }
+
+    header.scrolled .logo-img {
+        height: 28px;
+        /* Even smaller on scroll */
+    }
+
+    /* Header Actions Container */
+    .header-actions {
+        gap: 0.5rem;
+        /* Tighter gap */
+    }
+
+    /* Hide "Ligar Agora" Button on Mobile to save space */
+    .header-actions .btn-primary {
+        display: none;
+    }
+
+    /* Adjust Language Switcher */
+    .lang-switch {
+        padding: 2px;
+        transform: scale(0.9);
+        /* Slightly compact */
+    }
+
+    .lang-btn {
+        padding: 4px 10px;
+        /* Smaller padding */
+        font-size: 0.7rem;
+    }
+
+    /* Hamburger Menu */
     .mobile-menu-btn {
         display: flex;
         flex-direction: column;
@@ -1584,12 +1620,23 @@ footer {
         background: none;
         border: none;
         cursor: pointer;
+        padding: 0.5rem;
+        z-index: 100;
     }
 
+    /* Menu Color Logic */
     .mobile-menu-btn span {
-        width: 25px;
+        width: 24px;
         height: 2px;
-        background: var(--color-text-main);
+        background-color: white;
+        /* Default to white for transparent header */
+        transition: all 0.3s;
+        border-radius: 2px;
+    }
+
+    /* Scrolled Menu Color */
+    header.scrolled .mobile-menu-btn span {
+        background-color: var(--color-text-main);
     }
 
     #hero {
